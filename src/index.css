@@ -1,0 +1,312 @@
+:root {
+  --bg: #0f172a;        /* dark slate */
+  --panel: #020617;     /* darker */
+  --text: #e5e7eb;
+  --accent: #22c55e;    /* goat green */
+  --disabled: #555;      /* disabled color */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: var(--text);
+}
+
+/* === HOME SCREEN === */
+
+.home {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+}
+
+.home-title {
+  text-align: center;
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  margin: 32px 0 40px;
+  letter-spacing: 0.02em;
+}
+
+.home-form {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+  align-self: center;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: none;
+  background: #020617;
+  color: var(--text);
+  outline: 2px solid #1e293b;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:focus {
+  outline-color: var(--accent);
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  border: none;
+  background: #1e293b;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.05s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #052e16;
+  font-weight: 600;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background: var(--disabled);
+  color: #aaa;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Desktop tweaks */
+@media (min-width: 768px) {
+  .home {
+    padding: 40px;
+  }
+
+  .home-form {
+    gap: 20px;
+  }
+}
+
+/* === SPYMASTER === */
+
+.spymaster {
+  min-height: 100svh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.word-pair {
+  display: flex;
+  justify-content: space-between;
+  background: #020617;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 1.4rem;
+}
+
+/* === PLAYER === */
+
+.player-view {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.player-top-left {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.player-top-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.player-top-right button {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.scoreboard {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.score-labels {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.score-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1.5rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: 0.25rem;
+}
+
+.blue-score {
+  color: #2563eb;
+}
+
+.red-score {
+  color: #dc2626;
+}
+
+.dash {
+  opacity: 0.4;
+}
+
+/* Main Actions */
+.player-actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.action-button {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  border: none;
+  transition: transform 0.05s ease, opacity 0.15s ease;
+}
+
+.action-button.primary {
+  background: #222;
+  color: white;
+}
+
+.action-button.secondary {
+  background: #e5e5e5;
+  color: #111;
+}
+
+/* Disabled styling for guess/pass */
+.action-button:disabled {
+  background: var(--disabled);
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .action-button {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* Spymaster words */
+.spymaster-words {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.spy-word {
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+
+.spy-word.blue {
+  background: #0066ff;
+}
+
+.spy-word.red {
+  background: #ff0000;
+}
+
+.word-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.word {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0 1rem;
+}
+
+/* Guess input box */
+.guess-box {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.guess-box input {
+  width: 80%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  outline: 2px solid #1e293b;
+  background: #020617;
+  color: var(--text);
+}
+
+.guess-box button {
+  width: 50%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: #052e16;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .score-numbers {
+    font-size: 3rem;
+  }
+
+  .guess-box input {
+    width: 90%;
+  }
+
+  .guess-box button {
+    width: 60%;
+  }
+}
