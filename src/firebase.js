@@ -19,14 +19,14 @@ import {
 } from "firebase/firestore";
 import { generateWordPair } from "./words";
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBpwf5Q8w7V0WzpnWe-zgKsGRB-Sj3fjpI",
-  authDomain: "goat-paste.firebaseapp.com",
-  projectId: "goat-paste",
-  storageBucket: "goat-paste.firebasestorage.app",
-  messagingSenderId: "978086590790",
-  appId: "1:978086590790:web:f95d7c0e1743b11e824d47",
-  measurementId: "G-E1YS8W500Z"
+  apiKey: import.meta.env.FIREBASE_API_KEY,
+  authDomain: import.meta.env.FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);

@@ -49,7 +49,7 @@ export default function PlayerView({ roomId }) {
         </div>
         <div className="score-numbers">
           <span className="blue-score">{room.score[0]}</span>
-          <span className="dash">–</span>
+          <span className="dash">-</span>
           <span className="red-score">{room.score[1]}</span>
         </div>
       </div>
