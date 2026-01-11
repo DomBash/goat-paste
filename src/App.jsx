@@ -1,6 +1,5 @@
 import { useState} from "react";
 import Home from "./screens/Home";
-import SpymasterView from "./screens/SpymasterView";
 import PlayerView from "./screens/PlayerView";
 import { roomExists, createRoom, listenToRoom, } from "./firebase";
 
@@ -27,7 +26,6 @@ export default function App() {
   return (
     <>
       {screen === "home" && <Home onGo={handleGo} />}
-      {screen === "spymaster" && <SpymasterView room={room} roomId={roomId} />}
       {screen === "player" && <PlayerView room={room} roomId={roomId} />}
     </>
   );
