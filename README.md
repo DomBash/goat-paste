@@ -49,7 +49,7 @@ Goat Paste is a web-based competitive word game that combines strategy, creativi
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - No installation required!
 
-### Running the Game
+### Running the Game Locally
 
 1. Clone the repository:
    ```bash
@@ -61,9 +61,6 @@ Goat Paste is a web-based competitive word game that combines strategy, creativi
    ```bash
    open index.html
    ```
-   Or simply double-click the file.
-
-3. Gather your players and start playing!
 
 ## File Structure
 
@@ -84,8 +81,6 @@ goat-paste/
 
 Potential features for future versions:
 - Custom word lists
-- Difficulty levels
-- Multiplayer online support
 - Score history and leaderboards
 - Timed rounds
 
@@ -96,7 +91,3 @@ Feel free to fork this project and submit pull requests with improvements or new
 ## License
 
 This project is open source and available under the MIT License.
-
----
-
-**Enjoy the game, and may the best clue-givers win!** 🎉
