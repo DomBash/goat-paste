@@ -43,34 +43,6 @@ Goat Paste is a web-based competitive word game that combines strategy, creativi
 - **Architecture**: Single-page application with dynamic DOM manipulation
 - **Styling**: Custom CSS with responsive design
 
-## Getting Started
-
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- No installation required!
-
-### Running the Game Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/DomBash/goat-paste.git
-   cd goat-paste
-   ```
-
-2. Open `index.html` in your web browser:
-   ```bash
-   open index.html
-   ```
-
-## File Structure
-
-```
-goat-paste/
-├── index.html       # Main game interface
-├── style.css        # Game styling and layout
-└── script.js        # Game logic and interactivity
-```
-
 ## Game Strategy Tips
 
 - **For Clue-Givers**: Think about what your team knows vs. what the other team might infer
